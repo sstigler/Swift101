@@ -1,0 +1,6 @@
+framework module Snap {
+  umbrella header "Pods-Swift101_63-Snap-umbrella.h"
+
+  export *
+  module * { export * }
+}
