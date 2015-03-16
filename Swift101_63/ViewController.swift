@@ -9,13 +9,16 @@
 import UIKit
 import Snap
 
-
-class ViewController: UIViewController
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     // MARK: Data members
     
+    private var tableView: UITableView
     private var button: UIButton;
     private var customView: CustomView;
+    
+    private var dataToDisplay = ["one", "two", "three", "four"]
+    private let kCellResuseIdentifier = "CellID"
     
     // MARK: Lifecycle
 
@@ -23,9 +26,9 @@ class ViewController: UIViewController
     {
         self.button = UIButton()
         self.customView = CustomView(coder: aDecoder)
-        
+        self.tableView = UITableView()
+       
         super.init(coder: aDecoder)
-        
     }
     
     override func viewDidLoad()
@@ -40,13 +43,21 @@ class ViewController: UIViewController
     
     private func setupUI()
     {
+        // Button
         button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         button.backgroundColor = UIColor.greenColor()
         button.setTitle("Test Button", forState: UIControlState.Normal)
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(button)
+        self.view.addSubview(self.button)
     
-        self.view.addSubview(customView)
+        // Custom View
+        self.view.addSubview(self.customView)
+        
+        // Table
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: kCellResuseIdentifier)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.view.addSubview(self.tableView)
     }
     
     // MARK: Setup constraints
@@ -66,6 +77,13 @@ class ViewController: UIViewController
             make.trailing.equalTo(self.view.snp_trailing)
             make.height.equalTo(100);
         }
+        
+        self.tableView.snp_makeConstraints { (make) -> () in
+            make.top.equalTo(self.customView.snp_bottom).with.offset(10)
+            make.leading.equalTo(self.view.snp_leading);
+            make.trailing.equalTo(self.view.snp_trailing)
+            make.bottom.equalTo(self.view.snp_bottom)
+        }
     }
 
     // MARK: Button Actions
@@ -74,8 +92,27 @@ class ViewController: UIViewController
     {
         println("Pressed green button")
     }
+    
+    // MARK: UITableViewDelegate
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        println("Selected row: \(indexPath.row)")
+    }
+    
+    // MARK: UITableViewDataSource
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return self.dataToDisplay.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        var cell = self.tableView.dequeueReusableCellWithIdentifier(kCellResuseIdentifier) as! UITableViewCell
+        cell.textLabel!.text = self.dataToDisplay[indexPath.row]
+        return cell
+    }
+    
 }
-
-
 
