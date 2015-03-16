@@ -15,13 +15,14 @@ public class CustomTableViewCell : UITableViewCell
     // MARK: Data members
     
     public var label: UILabel
-    
+    public var button: UIButton
     
     // MARK: Lifecycle
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!)
     {
         self.label = UILabel()
+        self.button = UIButton()
     
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -33,6 +34,7 @@ public class CustomTableViewCell : UITableViewCell
     public required init(coder aDecoder: NSCoder)
     {
         self.label = UILabel()
+        self.button = UIButton()
         
         super.init(coder: aDecoder)
     }
@@ -41,20 +43,40 @@ public class CustomTableViewCell : UITableViewCell
     
     private func setupUI()
     {
-        label.backgroundColor = UIColor.whiteColor()
-        
+        // Label
+        self.label.backgroundColor = UIColor.whiteColor()
         self.addSubview(self.label)
+        
+        // Button
+        self.button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        self.button.backgroundColor = UIColor.blueColor()
+        self.button.setTitle("Cell Button", forState: UIControlState.Normal)
+        self.button.addTarget(self, action: "cellButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.addSubview(self.button)
     }
     
     private func setUpConstraints()
     {
-        label.snp_makeConstraints { (make) -> () in
+        self.label.snp_makeConstraints { (make) -> () in
             make.top.equalTo(self.snp_top)
             make.leading.equalTo(self.snp_leading)
             make.width.equalTo(100)
             make.height.equalTo(20)
         }
+        
+        self.button.snp_makeConstraints { (make) -> () in
+            make.top.equalTo(self.snp_top)
+            make.leading.equalTo(self.label.snp_trailing).with.offset(10)
+            make.width.equalTo(100)
+            make.height.equalTo(30)
+        }
     }
     
+    // MARK: Button action
+    
+    private func cellButtonAction(sender: UIButton!)
+    {
+        println("Cell button pushed")
+    }
     
 }

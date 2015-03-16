@@ -39,15 +39,14 @@ public class CustomView : UIView
         self.topButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         self.topButton.backgroundColor = UIColor.yellowColor()
         self.topButton.setTitle("Top Button", forState: UIControlState.Normal)
-        self.topButton.addTarget(self, action: "TopButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.topButton.addTarget(self, action: "topButton:", forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(self.topButton)
-        
         
         // Bottom button.
         self.bottomButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         self.bottomButton.backgroundColor = UIColor.purpleColor()
         self.bottomButton.setTitle("Bottom Button", forState: UIControlState.Normal)
-        self.bottomButton.addTarget(self, action: "BottomButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.bottomButton.addTarget(self, action: "bottomButton:", forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(self.bottomButton)
     }
     
@@ -74,12 +73,12 @@ public class CustomView : UIView
     
     // MARK: Button Actions
     
-    public func TopButton(sender: UIButton!)
+    public func topButton(sender: UIButton!)
     {
         println("Pressed top button")
     }
     
-    public func BottomButton(sender: UIButton!)
+    public func bottomButton(sender: UIButton!)
     {
         println("Pressed bottom button")
     }
