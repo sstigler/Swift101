@@ -13,9 +13,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 {
     // MARK: Data members
     
-    private var tableView: UITableView
     private var button: UIButton;
     private var customView: CustomView;
+    private var tableView: UITableView
     
     private var dataToDisplay = ["one", "two", "three", "four"]
     private let kCellResuseIdentifier = "CellID"
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view.addSubview(self.customView)
         
         // Table
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: kCellResuseIdentifier)
+        self.tableView.registerClass(CustomTableViewCell.self, forCellReuseIdentifier: kCellResuseIdentifier)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.view.addSubview(self.tableView)
@@ -109,8 +109,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cell = self.tableView.dequeueReusableCellWithIdentifier(kCellResuseIdentifier) as! UITableViewCell
-        cell.textLabel!.text = self.dataToDisplay[indexPath.row]
+        var cell : CustomTableViewCell = self.tableView.dequeueReusableCellWithIdentifier(kCellResuseIdentifier) as! CustomTableViewCell
+        cell.label.text = self.dataToDisplay[indexPath.row]
         return cell
     }
     
