@@ -26,6 +26,7 @@ public class CustomView : UIView
         
         super.init(coder: aDecoder)
         
+        self.backgroundColor = UIColor.redColor()
         self.setupUI()
         self.setupConstraints()
     }

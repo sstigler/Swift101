@@ -45,9 +45,7 @@ class ViewController: UIViewController
         button.setTitle("Test Button", forState: UIControlState.Normal)
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(button)
-        
-        //customView = CustomView(coder: aDecoder)
-        customView.backgroundColor = UIColor.redColor()
+    
         self.view.addSubview(customView)
     }
     
