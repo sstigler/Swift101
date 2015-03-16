@@ -12,6 +12,7 @@ import Snap
 
 public class CustomView : UIView
 {
+    // MARK: Data members
     
     private var topButton : UIButton
     private var bottomButton : UIButton
@@ -28,8 +29,6 @@ public class CustomView : UIView
         self.setupUI()
         self.setupConstraints()
     }
-    
-
     
     // MARK: Setup UI
     
@@ -49,7 +48,6 @@ public class CustomView : UIView
         self.bottomButton.setTitle("Bottom Button", forState: UIControlState.Normal)
         self.bottomButton.addTarget(self, action: "BottomButton:", forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(self.bottomButton)
-        
     }
     
     // MARK: Setup Constraints
@@ -71,26 +69,17 @@ public class CustomView : UIView
             make.trailing.equalTo(self.snp_trailing)
             make.bottom.equalTo(self.snp_bottom)
         }
-        
-        
     }
-    
     
     // MARK: Button Actions
     
-    
     public func TopButton(sender: UIButton!)
     {
-        println("Top")
+        println("Pressed top button")
     }
     
     public func BottomButton(sender: UIButton!)
     {
-        println("Bottom")
+        println("Pressed bottom button")
     }
-
-    
-    
-    
-    
 }

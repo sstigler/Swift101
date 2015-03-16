@@ -12,6 +12,8 @@ import Snap
 
 class ViewController: UIViewController
 {
+    // MARK: Data members
+    
     private var button: UIButton;
     private var customView: CustomView;
     
@@ -72,8 +74,7 @@ class ViewController: UIViewController
     
     func buttonAction(sender:UIButton!)
     {
-        var plistProxy = PListProxy()
-    
+        println("Pressed green button")
     }
 
 }
