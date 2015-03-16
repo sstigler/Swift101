@@ -51,7 +51,8 @@ public class CustomTableViewCell : UITableViewCell
         self.button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         self.button.backgroundColor = UIColor.blueColor()
         self.button.setTitle("Cell Button", forState: UIControlState.Normal)
-        self.button.addTarget(self, action: "cellButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        //self.button.addTarget(self, action: "cellButtonAction:", 
+        // forControlEvents: UIControlEvents.TouchUpInside) // Doesn't work
         self.addSubview(self.button)
     }
     
@@ -71,12 +72,4 @@ public class CustomTableViewCell : UITableViewCell
             make.height.equalTo(30)
         }
     }
-    
-    // MARK: Button action
-    
-    private func cellButtonAction(sender: UIButton!)
-    {
-        println("Cell button pushed")
-    }
-    
 }

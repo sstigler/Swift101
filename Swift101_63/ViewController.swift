@@ -111,7 +111,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         var cell : CustomTableViewCell = self.tableView.dequeueReusableCellWithIdentifier(kCellResuseIdentifier) as! CustomTableViewCell
         cell.label.text = self.dataToDisplay[indexPath.row]
+        cell.button.tag = indexPath.row
+        cell.button.addTarget(self, action: "cellButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         return cell
+    }
+    
+    // MARK: Cell Button Action
+    
+    func cellButtonAction(sender: UIButton!)
+    {
+        println("Cell Button pushed for row: \(sender.tag)")
     }
     
 }
