@@ -14,8 +14,8 @@ public class CustomView : UIView
 {
     // MARK: Data members
     
-    private var topButton : UIButton
-    private var bottomButton : UIButton
+    private var topButton = UIButton()
+    private var bottomButton = UIButton()
     
     // MARK: Construction
     

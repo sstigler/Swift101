@@ -24,6 +24,7 @@
 		E73EB31B1AB3861700623E91 /* PListProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB3121AB37D3000623E91 /* PListProxy.swift */; };
 		E744A90E1AB4690900E27137 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E744A90D1AB4690900E27137 /* CustomView.swift */; };
 		E7C355871AB7593C0048D91C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C355861AB7593C0048D91C /* CustomTableViewCell.swift */; };
+		E7C355891AB7672D0048D91C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C355881AB7672D0048D91C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		E73EB3151AB37DC800623E91 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		E744A90D1AB4690900E27137 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		E7C355861AB7593C0048D91C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		E7C355881AB7672D0048D91C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			children = (
 				E73EB2F21AB356D100623E91 /* LaunchScreen.xib */,
 				E73EB2ED1AB356D100623E91 /* Main.storyboard */,
+				E7C355881AB7672D0048D91C /* LoginViewController.swift */,
 				E73EB2EB1AB356D100623E91 /* ViewController.swift */,
 				E744A90D1AB4690900E27137 /* CustomView.swift */,
 				E7C355861AB7593C0048D91C /* CustomTableViewCell.swift */,
@@ -361,6 +364,7 @@
 				E709BC5C1AB7108D00A34DFE /* Person.swift in Sources */,
 				E73EB3131AB37D3000623E91 /* PListProxy.swift in Sources */,
 				E73EB2EA1AB356D100623E91 /* AppDelegate.swift in Sources */,
+				E7C355891AB7672D0048D91C /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

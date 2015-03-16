@@ -86,12 +86,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
 
+
+
     // MARK: Button Actions
     
     func buttonAction(sender:UIButton!)
     {
-        println("Pressed green button")
+
+        var login : LoginViewController = LoginViewController()
+      
+        self.presentViewController(login, animated: true) { () -> Void in
+            println("Presented login screen")
+        }
+
+        
     }
+    
     
     // MARK: UITableViewDelegate
 
