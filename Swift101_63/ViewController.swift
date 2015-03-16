@@ -13,23 +13,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 {
     // MARK: Data members
     
-    private var button: UIButton;
-    private var customView: CustomView;
-    private var tableView: UITableView
-    
+    private var button = UIButton()
+    private var tableView = UITableView()
+    private var customView = CustomView()
+   
     private var dataToDisplay = ["one", "two", "three", "four"]
     private let kCellResuseIdentifier = "CellID"
     
     // MARK: Lifecycle
-
-    required init(coder aDecoder: NSCoder)
-    {
-        self.button = UIButton()
-        self.customView = CustomView(coder: aDecoder)
-        self.tableView = UITableView()
-       
-        super.init(coder: aDecoder)
-    }
     
     override func viewDidLoad()
     {

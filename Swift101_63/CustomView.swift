@@ -18,14 +18,9 @@ public class CustomView : UIView
     private var bottomButton = UIButton()
     
     // MARK: Construction
-    
-    public required init(coder aDecoder: NSCoder)
+        
+    public override func layoutSubviews()
     {
-        self.topButton = UIButton()
-        self.bottomButton = UIButton()
-        
-        super.init(coder: aDecoder)
-        
         self.backgroundColor = UIColor.redColor()
         self.setupUI()
         self.setupConstraints()

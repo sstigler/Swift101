@@ -14,8 +14,8 @@ public class CustomTableViewCell : UITableViewCell
 {
     // MARK: Data members
     
-    public var label: UILabel
-    public var button: UIButton
+    public var label = UILabel()
+    public var button = UIButton()
     
     // MARK: Lifecycle
     
@@ -33,9 +33,6 @@ public class CustomTableViewCell : UITableViewCell
     
     public required init(coder aDecoder: NSCoder)
     {
-        self.label = UILabel()
-        self.button = UIButton()
-        
         super.init(coder: aDecoder)
     }
     
