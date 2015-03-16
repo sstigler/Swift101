@@ -9,9 +9,10 @@
 import UIKit
 import XCTest
 
-
 class Swift101_63Tests: XCTestCase
 {
+    // MARK: Lifecycle
+    
     override func setUp()
     {
         super.setUp()
@@ -22,29 +23,29 @@ class Swift101_63Tests: XCTestCase
         super.tearDown()
     }
     
-    func testExample()
+    // MARK: PList Tests
+    
+    func testPList()
     {
-        var pp = PListProxy()
-        var bb = pp.getBadge(5150)
+        var plp = PListProxy()
+        plp.loadUserData()
         
-        println("The username is \(bb.username).")
+        let userData = plp.userData
+        println("\(userData)")
         
-        var shoppingList = bb.getShoppingList(1)
+        plp.writeToPlist("2", value: "Two")
+        println("\(userData)")
         
-        let b = Badge(username: "test", levelNumber: 1)
-        var l = pp.getBadges(1)
+        plp.writeToPlist( "3", value: "Three")
+        println("\(userData)")
+        
+        
         
         XCTAssert(true, "Pass")
     }
-    
-    /*
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    */
+
 }
+
+
 
 

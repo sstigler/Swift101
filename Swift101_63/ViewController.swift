@@ -23,6 +23,7 @@ class ViewController: UIViewController
         self.customView = CustomView()
         
         super.init(coder: aDecoder)
+        
     }
     
     override func viewDidLoad()
@@ -71,7 +72,8 @@ class ViewController: UIViewController
     
     func buttonAction(sender:UIButton!)
     {
-        println("Button tapped")
+        var plistProxy = PListProxy()
+    
     }
 
 }
