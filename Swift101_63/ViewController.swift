@@ -12,15 +12,15 @@ import Snap
 
 class ViewController: UIViewController
 {
-    var button: UIButton;
-    var customView: CustomView;
+    private var button: UIButton;
+    private var customView: CustomView;
     
     // MARK: Lifecycle
 
     required init(coder aDecoder: NSCoder)
     {
         self.button = UIButton()
-        self.customView = CustomView()
+        self.customView = CustomView(coder: aDecoder)
         
         super.init(coder: aDecoder)
         
@@ -44,7 +44,7 @@ class ViewController: UIViewController
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(button)
         
-        customView = CustomView()
+        //customView = CustomView(coder: aDecoder)
         customView.backgroundColor = UIColor.redColor()
         self.view.addSubview(customView)
     }
