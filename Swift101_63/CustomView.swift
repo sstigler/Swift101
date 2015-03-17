@@ -32,7 +32,7 @@ public class CustomView : UIView
         self.backgroundColor = UIColor.redColor()
         
         // Top button
-        self.topButton = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+        self.topButton = UIButton.buttonWithType(.System) as? UIButton
         self.topButton?.backgroundColor = UIColor.yellowColor()
         self.topButton?.setTitle("Top Button", forState: .Normal)
         self.topButton?.addTarget(self, action: "topButton:", forControlEvents: .TouchUpInside)
