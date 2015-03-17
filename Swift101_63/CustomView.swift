@@ -21,7 +21,6 @@ public class CustomView : UIView
         
     public override func layoutSubviews()
     {
-        self.backgroundColor = UIColor.redColor()
         self.setupUI()
         self.setupConstraints()
     }
@@ -30,6 +29,8 @@ public class CustomView : UIView
     
     public func setupUI()
     {
+        self.backgroundColor = UIColor.redColor()
+        
         // Top button
         self.topButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         self.topButton.backgroundColor = UIColor.yellowColor()

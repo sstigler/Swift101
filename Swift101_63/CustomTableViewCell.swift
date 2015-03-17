@@ -21,12 +21,8 @@ public class CustomTableViewCell : UITableViewCell
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!)
     {
-        self.label = UILabel()
-        self.button = UIButton()
-    
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.backgroundColor = UIColor.grayColor()
         self.setupUI()
         self.setUpConstraints()
     }
@@ -40,6 +36,8 @@ public class CustomTableViewCell : UITableViewCell
     
     private func setupUI()
     {
+        self.backgroundColor = UIColor.grayColor()
+        
         // Label
         self.label.backgroundColor = UIColor.whiteColor()
         self.addSubview(self.label)
