@@ -9,3 +9,4 @@ Helper project that illustrates the following:
 * Snap (Masonry) UI layout constraints
 * Subclassing UIView
 * Subclassing UITableViewCell
+* Modal display of view controller
