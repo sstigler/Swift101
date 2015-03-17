@@ -8,20 +8,20 @@
 
 import Foundation
 
-protocol LoginManagerDelegate
+protocol LoginManagerDelegate: class
 {
     func didFinishLoggingIn(loginManager: LoginManager, text: String)
 }
 
 public class LoginManager
 {
-    weak var delegate:LoginManagerDelegate! = nil
+    weak var delegate: LoginManagerDelegate?
     
     public func login(username: String, password: String)
     {
         // Make call to auth endpoint.
         
-        if ((delegate) != nil) {
+        if (delegate != nil) {
             delegate!.didFinishLoggingIn(self, text: "OK")
         }
     }
