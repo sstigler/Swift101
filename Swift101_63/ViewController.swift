@@ -17,7 +17,7 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var tableView = UITableView()
     private var customView = CustomView()
    
-    private var dataToDisplay = ["one", "two", "three", "four"]
+    private var dataToDisplay = ["one", "two", "three"]
     private let kCellResuseIdentifier = "CellID"
     
     // MARK: Lifecycle
@@ -122,9 +122,12 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
         println("Cell Button pushed for row: \(sender.tag)")
     }
     
-    public func didDismiss()
+    // MARK: LoginViewController callback
+    
+    public func didDismissLoginViewController()
     {
-        println("Did dismiss")
+        dataToDisplay = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+        self.tableView.reloadData()
     }
     
 }
