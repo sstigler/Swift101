@@ -17,7 +17,7 @@ public class LoginViewController : UIViewController, LoginManagerDelegate
     private var username = UITextField()
     private var password = UITextField()
     private var button = UIButton()
-    public var rootViewController = ViewController()
+    var rootViewController = ViewController()
     
     // MARK: Lifecycle
     
