@@ -15,7 +15,7 @@ protocol LoginManagerDelegate
 
 public class LoginManager
 {
-    var delegate:LoginManagerDelegate! = nil
+    weak var delegate:LoginManagerDelegate! = nil
     
     public func login(username: String, password: String)
     {
