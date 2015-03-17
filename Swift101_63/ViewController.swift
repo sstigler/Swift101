@@ -13,7 +13,7 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
 {
     // MARK: Data members
     
-    private var button = UIButton()
+    private var button: UIButton?
     private let tableView = UITableView()
     private let customView = CustomView()
    
@@ -35,11 +35,14 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
     private func setupUI()
     {
         // Button
-        button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        button.backgroundColor = UIColor.greenColor()
-        button.setTitle("Login", forState: UIControlState.Normal)
-        button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(self.button)
+        button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+        button?.backgroundColor = UIColor.greenColor()
+        button?.setTitle("Login", forState: UIControlState.Normal)
+        button?.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        if button != nil {
+            self.view.addSubview(self.button!)
+        }
     
         // Custom View
         self.view.addSubview(self.customView)
@@ -55,7 +58,7 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private func setupConstraints()
     {
-        self.button.snp_makeConstraints { (make) -> () in
+        self.button?.snp_makeConstraints { (make) -> () in
             make.top.equalTo(self.view.snp_top).with.offset(30)
             make.leading.equalTo(self.view.snp_leading).with.offset(50)
             make.trailing.equalTo(self.view.snp_trailing).with.offset(-50)
@@ -63,7 +66,7 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         self.customView.snp_makeConstraints { (make) -> () in
-            make.top.equalTo(self.button.snp_bottom).with.offset(10)
+            make.top.equalTo(self.button!.snp_bottom).with.offset(10)
             make.leading.equalTo(self.view.snp_leading)
             make.trailing.equalTo(self.view.snp_trailing)
             make.height.equalTo(100);

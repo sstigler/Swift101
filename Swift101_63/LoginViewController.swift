@@ -16,7 +16,7 @@ public class LoginViewController : UIViewController, LoginManagerDelegate
     
     private let username = UITextField()
     private let password = UITextField()
-    private var button = UIButton()
+    private var button: UIButton?
     var rootViewController = ViewController()
     
     // MARK: Lifecycle
@@ -49,11 +49,14 @@ public class LoginViewController : UIViewController, LoginManagerDelegate
         self.view.addSubview(self.password)
         
         // OK Button
-        self.button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        self.button.backgroundColor = UIColor.greenColor()
-        self.button.setTitle("OK", forState: UIControlState.Normal)
-        self.button.addTarget(self, action: "loginButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(self.button)
+        self.button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+        self.button?.backgroundColor = UIColor.greenColor()
+        self.button?.setTitle("OK", forState: UIControlState.Normal)
+        self.button?.addTarget(self, action: "loginButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        if self.button != nil {
+            self.view.addSubview(self.button!)
+        }
     }
     
     // MARK: Setup Constraints
@@ -74,7 +77,7 @@ public class LoginViewController : UIViewController, LoginManagerDelegate
             make.height.equalTo(50)
         }
         
-        self.button.snp_makeConstraints { (make) -> () in
+        self.button?.snp_makeConstraints { (make) -> () in
             make.top.equalTo(self.password.snp_bottom).with.offset(20)
             make.leading.equalTo(self.view.snp_leading).with.offset(50)
             make.trailing.equalTo(self.view.snp_trailing).with.offset(-50)

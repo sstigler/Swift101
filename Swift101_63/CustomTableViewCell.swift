@@ -15,7 +15,7 @@ public class CustomTableViewCell : UITableViewCell
     // MARK: Data members
     
     public let label = UILabel()
-    public var button = UIButton()
+    public var button: UIButton?
     
     // MARK: Lifecycle
     
@@ -43,10 +43,13 @@ public class CustomTableViewCell : UITableViewCell
         self.addSubview(self.label)
         
         // Button
-        self.button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        self.button.backgroundColor = UIColor.blueColor()
-        self.button.setTitle("Cell Button", forState: UIControlState.Normal)
-        self.addSubview(self.button)
+        self.button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+        self.button?.backgroundColor = UIColor.blueColor()
+        self.button?.setTitle("Cell Button", forState: UIControlState.Normal)
+        
+        if self.button != nil {
+            self.addSubview(self.button!)
+        }
     }
     
     private func setUpConstraints()
@@ -58,7 +61,7 @@ public class CustomTableViewCell : UITableViewCell
             make.height.equalTo(20)
         }
         
-        self.button.snp_makeConstraints { (make) -> () in
+        self.button?.snp_makeConstraints { (make) -> () in
             make.top.equalTo(self.snp_top)
             make.leading.equalTo(self.label.snp_trailing).with.offset(10)
             make.width.equalTo(100)
