@@ -20,10 +20,7 @@ public class LoginManager
     public func login(username: String, password: String)
     {
         // Make call to auth endpoint.
-        
-        if (delegate != nil) {
-            delegate!.didFinishLoggingIn(self, text: "OK")
-        }
+        delegate?.didFinishLoggingIn(self, text: "OK")
     }
     
     public func loginWithCompletion(username: String, password: String, completion: (result: String)->())
