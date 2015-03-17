@@ -88,10 +88,12 @@ public class LoginViewController : UIViewController, LoginManagerDelegate
     {
         var loginManager = LoginManager()
         loginManager.delegate = self
+        
+        // Log in using the delegate.
         loginManager.login(self.username.text, password: self.password.text)
         
-        loginManager.loginWithCompletion(self.username.text, password: self.password.text)
-        { (result) -> () in
+        // Log in using completion handler.
+        loginManager.loginWithCompletion(self.username.text, password: self.password.text) { (result) -> () in
             println("Logged in with completion handler \(result).")
         }
     }
@@ -100,7 +102,7 @@ public class LoginViewController : UIViewController, LoginManagerDelegate
     
     func didFinishLoggingIn(loginManager: LoginManager, text: String)
     {
-        println("Logged in with delegate.")
+        println("Logged in with delegate \(text).")
 
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
             self.rootViewController.didDismissLoginViewController()
