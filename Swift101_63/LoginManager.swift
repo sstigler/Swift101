@@ -26,11 +26,11 @@ public class LoginManager
         }
     }
     
-    public func loginWithCompletion(username: String, password: String, completion: ()->())
+    public func loginWithCompletion(username: String, password: String, completion: (result: String)->())
     {
         // Make call to auth endpoint.
         
-        completion()
+        completion(result: "OK")
     }
 }
 
