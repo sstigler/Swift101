@@ -35,10 +35,10 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
     private func setupUI()
     {
         // Button
-        button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+        button = UIButton.buttonWithType(.System) as? UIButton
         button?.backgroundColor = UIColor.greenColor()
-        button?.setTitle("Login", forState: UIControlState.Normal)
-        button?.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        button?.setTitle("Login", forState: .Normal)
+        button?.addTarget(self, action: "buttonAction:", forControlEvents: .TouchUpInside)
         
         if button != nil {
             self.view.addSubview(self.button!)
@@ -116,8 +116,8 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
     {
         var cell : CustomTableViewCell = self.tableView.dequeueReusableCellWithIdentifier(kCellResuseIdentifier) as! CustomTableViewCell
         cell.label.text = self.dataToDisplay[indexPath.row]
-        cell.button.tag = indexPath.row
-        cell.button.addTarget(self, action: "cellButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        cell.button?.tag = indexPath.row
+        cell.button?.addTarget(self, action: "cellButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         return cell
     }
     

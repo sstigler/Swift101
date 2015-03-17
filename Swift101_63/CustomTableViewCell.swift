@@ -43,9 +43,9 @@ public class CustomTableViewCell : UITableViewCell
         self.addSubview(self.label)
         
         // Button
-        self.button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+        self.button = UIButton.buttonWithType(.System) as? UIButton
         self.button?.backgroundColor = UIColor.blueColor()
-        self.button?.setTitle("Cell Button", forState: UIControlState.Normal)
+        self.button?.setTitle("Cell Button", forState: .Normal)
         
         if self.button != nil {
             self.addSubview(self.button!)

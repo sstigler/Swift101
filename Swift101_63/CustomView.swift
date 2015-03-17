@@ -34,18 +34,18 @@ public class CustomView : UIView
         // Top button
         self.topButton = UIButton.buttonWithType(UIButtonType.System) as? UIButton
         self.topButton?.backgroundColor = UIColor.yellowColor()
-        self.topButton?.setTitle("Top Button", forState: UIControlState.Normal)
-        self.topButton?.addTarget(self, action: "topButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.topButton?.setTitle("Top Button", forState: .Normal)
+        self.topButton?.addTarget(self, action: "topButton:", forControlEvents: .TouchUpInside)
         
         if self.topButton != nil {
             self.addSubview(self.topButton!)
         }
         
         // Bottom button.
-        self.bottomButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        self.bottomButton = UIButton.buttonWithType(UIButtonType.System) as? UIButton
         self.bottomButton?.backgroundColor = UIColor.purpleColor()
-        self.bottomButton?.setTitle("Bottom Button", forState: UIControlState.Normal)
-        self.bottomButton?.addTarget(self, action: "bottomButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.bottomButton?.setTitle("Bottom Button", forState: .Normal)
+        self.bottomButton?.addTarget(self, action: "bottomButton:", forControlEvents: .TouchUpInside)
         
         if self.bottomButton != nil {
             self.addSubview(self.bottomButton!)

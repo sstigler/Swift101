@@ -38,21 +38,21 @@ public class LoginViewController : UIViewController, LoginManagerDelegate
         // Username
         self.username.placeholder = "Username"
         self.username.backgroundColor = UIColor.whiteColor()
-        self.username.borderStyle = UITextBorderStyle.RoundedRect
+        self.username.borderStyle = .RoundedRect
         self.view.addSubview(self.username)
         
         // Password
         self.password.placeholder = "Password"
         self.password.backgroundColor = UIColor.whiteColor()
-        self.password.borderStyle = UITextBorderStyle.RoundedRect
+        self.password.borderStyle = .RoundedRect
         self.password.secureTextEntry = true
         self.view.addSubview(self.password)
         
         // OK Button
-        self.button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+        self.button = UIButton.buttonWithType(.System) as? UIButton
         self.button?.backgroundColor = UIColor.greenColor()
-        self.button?.setTitle("OK", forState: UIControlState.Normal)
-        self.button?.addTarget(self, action: "loginButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.button?.setTitle("OK", forState: .Normal)
+        self.button?.addTarget(self, action: "loginButtonAction:", forControlEvents: .TouchUpInside)
         
         if self.button != nil {
             self.view.addSubview(self.button!)
