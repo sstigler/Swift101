@@ -6,7 +6,6 @@ use_frameworks!
 target 'Swift101_63' do
     
 pod 'Snap'
-pod 'AFNetworking'
 
 end
 

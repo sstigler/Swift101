@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B1E54C9443ED0E9C8534AAA5 /* Pods_Swift101_63.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604723703A838E2AD765C873 /* Pods_Swift101_63.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		E709BC5C1AB7108D00A34DFE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709BC5B1AB7108D00A34DFE /* Person.swift */; };
-		E709BC5D1AB710B300A34DFE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709BC5B1AB7108D00A34DFE /* Person.swift */; };
 		E709BC611AB7149400A34DFE /* UserData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709BC601AB7149400A34DFE /* UserData.plist */; };
 		E73EB2EA1AB356D100623E91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB2E91AB356D100623E91 /* AppDelegate.swift */; };
 		E73EB2EC1AB356D100623E91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB2EB1AB356D100623E91 /* ViewController.swift */; };
@@ -18,12 +16,12 @@
 		E73EB2F41AB356D100623E91 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E73EB2F21AB356D100623E91 /* LaunchScreen.xib */; };
 		E73EB3001AB356D100623E91 /* Swift101_63Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB2FF1AB356D100623E91 /* Swift101_63Tests.swift */; };
 		E73EB30B1AB3699600623E91 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73EB30A1AB3699600623E91 /* CloudKit.framework */; };
-		E73EB30F1AB36B1200623E91 /* CloudKitProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB30E1AB36B1200623E91 /* CloudKitProxy.swift */; };
 		E73EB3131AB37D3000623E91 /* PListProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB3121AB37D3000623E91 /* PListProxy.swift */; };
-		E73EB3161AB37DC800623E91 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB3151AB37DC800623E91 /* Badge.swift */; };
-		E73EB31A1AB3859D00623E91 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB3151AB37DC800623E91 /* Badge.swift */; };
 		E73EB31B1AB3861700623E91 /* PListProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB3121AB37D3000623E91 /* PListProxy.swift */; };
 		E744A90E1AB4690900E27137 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E744A90D1AB4690900E27137 /* CustomView.swift */; };
+		E7C355871AB7593C0048D91C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C355861AB7593C0048D91C /* CustomTableViewCell.swift */; };
+		E7C355891AB7672D0048D91C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C355881AB7672D0048D91C /* LoginViewController.swift */; };
+		E7C3558C1AB85E700048D91C /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3558B1AB85E700048D91C /* LoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +38,6 @@
 		604723703A838E2AD765C873 /* Pods_Swift101_63.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift101_63.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82705E1B2BD3A7A341B8CE0D /* Pods-Swift101_63.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift101_63.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift101_63/Pods-Swift101_63.debug.xcconfig"; sourceTree = "<group>"; };
 		911E31BA54D12A58A8C088B4 /* Pods-Swift101_63.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift101_63.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift101_63/Pods-Swift101_63.release.xcconfig"; sourceTree = "<group>"; };
-		E709BC5B1AB7108D00A34DFE /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E709BC601AB7149400A34DFE /* UserData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserData.plist; sourceTree = "<group>"; };
 		E73EB2E41AB356D100623E91 /* Swift101_63.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift101_63.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73EB2E81AB356D100623E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,10 +51,11 @@
 		E73EB2FF1AB356D100623E91 /* Swift101_63Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift101_63Tests.swift; sourceTree = "<group>"; };
 		E73EB3091AB3698E00623E91 /* Swift101_63.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Swift101_63.entitlements; sourceTree = "<group>"; };
 		E73EB30A1AB3699600623E91 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		E73EB30E1AB36B1200623E91 /* CloudKitProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitProxy.swift; sourceTree = "<group>"; };
 		E73EB3121AB37D3000623E91 /* PListProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PListProxy.swift; sourceTree = "<group>"; };
-		E73EB3151AB37DC800623E91 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		E744A90D1AB4690900E27137 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		E7C355861AB7593C0048D91C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		E7C355881AB7672D0048D91C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E7C3558B1AB85E700048D91C /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				E73EB30D1AB36A6400623E91 /* UI */,
+				E7C3558A1AB85E580048D91C /* AppLogic */,
 				E73EB30C1AB36A4500623E91 /* Data Access */,
-				E73EB3141AB37DA600623E91 /* Models */,
 				E709BC581AB4F1FA00A34DFE /* DataStore */,
 				E73EB2E71AB356D100623E91 /* Supporting Files */,
 			);
@@ -168,7 +166,6 @@
 		E73EB30C1AB36A4500623E91 /* Data Access */ = {
 			isa = PBXGroup;
 			children = (
-				E73EB30E1AB36B1200623E91 /* CloudKitProxy.swift */,
 				E73EB3121AB37D3000623E91 /* PListProxy.swift */,
 			);
 			name = "Data Access";
@@ -180,20 +177,21 @@
 			children = (
 				E73EB2F21AB356D100623E91 /* LaunchScreen.xib */,
 				E73EB2ED1AB356D100623E91 /* Main.storyboard */,
+				E7C355881AB7672D0048D91C /* LoginViewController.swift */,
 				E73EB2EB1AB356D100623E91 /* ViewController.swift */,
 				E744A90D1AB4690900E27137 /* CustomView.swift */,
+				E7C355861AB7593C0048D91C /* CustomTableViewCell.swift */,
 				E73EB2F01AB356D100623E91 /* Images.xcassets */,
 			);
 			name = UI;
 			sourceTree = "<group>";
 		};
-		E73EB3141AB37DA600623E91 /* Models */ = {
+		E7C3558A1AB85E580048D91C /* AppLogic */ = {
 			isa = PBXGroup;
 			children = (
-				E73EB3151AB37DC800623E91 /* Badge.swift */,
-				E709BC5B1AB7108D00A34DFE /* Person.swift */,
+				E7C3558B1AB85E700048D91C /* LoginManager.swift */,
 			);
-			name = Models;
+			name = AppLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,12 +353,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E73EB2EC1AB356D100623E91 /* ViewController.swift in Sources */,
-				E73EB3161AB37DC800623E91 /* Badge.swift in Sources */,
-				E73EB30F1AB36B1200623E91 /* CloudKitProxy.swift in Sources */,
 				E744A90E1AB4690900E27137 /* CustomView.swift in Sources */,
-				E709BC5C1AB7108D00A34DFE /* Person.swift in Sources */,
+				E7C355871AB7593C0048D91C /* CustomTableViewCell.swift in Sources */,
+				E7C3558C1AB85E700048D91C /* LoginManager.swift in Sources */,
 				E73EB3131AB37D3000623E91 /* PListProxy.swift in Sources */,
 				E73EB2EA1AB356D100623E91 /* AppDelegate.swift in Sources */,
+				E7C355891AB7672D0048D91C /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,8 +368,6 @@
 			files = (
 				E73EB31B1AB3861700623E91 /* PListProxy.swift in Sources */,
 				E73EB3001AB356D100623E91 /* Swift101_63Tests.swift in Sources */,
-				E709BC5D1AB710B300A34DFE /* Person.swift in Sources */,
-				E73EB31A1AB3859D00623E91 /* Badge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

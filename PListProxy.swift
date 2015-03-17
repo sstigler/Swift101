@@ -10,6 +10,8 @@ import Foundation
 
 public class PListProxy
 {
+    // MARK: Data members
+    
     public var userData : NSMutableDictionary?
     private var pathToUserData = ""
     
@@ -20,7 +22,7 @@ public class PListProxy
         userData = [:]
     }
     
-    // MARK: Methods
+    // MARK: Pulbic methods
     
     public func loadUserData()
     {
@@ -34,6 +36,8 @@ public class PListProxy
         userData?.setObject(value, forKey: key)
         userData?.writeToFile(self.pathToUserData, atomically: true)
     }
+    
+    // MARK: Private methods
     
     private func initializePlist()
     {
