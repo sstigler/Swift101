@@ -90,7 +90,7 @@ public class LoginViewController : UIViewController, LoginManagerDelegate
         loginManager.delegate = self
         loginManager.login(self.username.text, password: self.password.text)
         
-        loginManager.loginWithCompletion("", password: "")
+        loginManager.loginWithCompletion(self.username.text, password: self.password.text)
         { (result) -> () in
             println("Logged in with completion handler \(result).")
         }
