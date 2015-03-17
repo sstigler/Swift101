@@ -46,8 +46,6 @@ public class CustomTableViewCell : UITableViewCell
         self.button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         self.button.backgroundColor = UIColor.blueColor()
         self.button.setTitle("Cell Button", forState: UIControlState.Normal)
-        //self.button.addTarget(self, action: "cellButtonAction:", 
-        // forControlEvents: UIControlEvents.TouchUpInside) // Doesn't work
         self.addSubview(self.button)
     }
     

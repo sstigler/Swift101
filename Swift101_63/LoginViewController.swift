@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Snap
 
-public class LoginViewController : UIViewController
+public class LoginViewController : UIViewController, LoginManagerDelegate
 {
     // MARK: Data members
     
@@ -52,7 +52,7 @@ public class LoginViewController : UIViewController
         self.button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         self.button.backgroundColor = UIColor.greenColor()
         self.button.setTitle("OK", forState: UIControlState.Normal)
-        self.button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.button.addTarget(self, action: "loginButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.button)
     }
     
@@ -84,10 +84,23 @@ public class LoginViewController : UIViewController
     
     // MARK: Action
 
-    func buttonAction(sender:UIButton!)
+    func loginButtonAction(sender:UIButton!)
     {
-        println("Username: \(self.username.text). Password: \(self.password.text).")
+        var loginManager = LoginManager()
+        loginManager.delegate = self
+        loginManager.login(self.username.text, password: self.password.text)
         
+        loginManager.loginWithCompletion(self.username.text, password: self.password.text) { () -> () in
+            println("Logged in with completion handler.")
+        }
+    }
+    
+    // MARK: LoginManagerDelegate
+    
+    func didFinishLoggingIn(loginManager: LoginManager, text: String)
+    {
+        println("Logged in with delegate.")
+
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
             self.rootViewController.didDismissLoginViewController()
         })

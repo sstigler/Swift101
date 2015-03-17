@@ -25,6 +25,7 @@
 		E744A90E1AB4690900E27137 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E744A90D1AB4690900E27137 /* CustomView.swift */; };
 		E7C355871AB7593C0048D91C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C355861AB7593C0048D91C /* CustomTableViewCell.swift */; };
 		E7C355891AB7672D0048D91C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C355881AB7672D0048D91C /* LoginViewController.swift */; };
+		E7C3558C1AB85E700048D91C /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3558B1AB85E700048D91C /* LoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		E744A90D1AB4690900E27137 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		E7C355861AB7593C0048D91C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		E7C355881AB7672D0048D91C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E7C3558B1AB85E700048D91C /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				E73EB30D1AB36A6400623E91 /* UI */,
+				E7C3558A1AB85E580048D91C /* AppLogic */,
 				E73EB30C1AB36A4500623E91 /* Data Access */,
 				E73EB3141AB37DA600623E91 /* Models */,
 				E709BC581AB4F1FA00A34DFE /* DataStore */,
@@ -197,6 +200,14 @@
 				E709BC5B1AB7108D00A34DFE /* Person.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E7C3558A1AB85E580048D91C /* AppLogic */ = {
+			isa = PBXGroup;
+			children = (
+				E7C3558B1AB85E700048D91C /* LoginManager.swift */,
+			);
+			name = AppLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +373,7 @@
 				E744A90E1AB4690900E27137 /* CustomView.swift in Sources */,
 				E7C355871AB7593C0048D91C /* CustomTableViewCell.swift in Sources */,
 				E709BC5C1AB7108D00A34DFE /* Person.swift in Sources */,
+				E7C3558C1AB85E700048D91C /* LoginManager.swift in Sources */,
 				E73EB3131AB37D3000623E91 /* PListProxy.swift in Sources */,
 				E73EB2EA1AB356D100623E91 /* AppDelegate.swift in Sources */,
 				E7C355891AB7672D0048D91C /* LoginViewController.swift in Sources */,
