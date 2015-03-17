@@ -15,6 +15,7 @@ public class LoginViewController : UIViewController
     // MARK: Data members
     
     private var button = UIButton()
+    public var rootViewController = ViewController()
     
     // MARK: Lifecycle
     
@@ -33,7 +34,7 @@ public class LoginViewController : UIViewController
     {
         self.button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         self.button.backgroundColor = UIColor.greenColor()
-        self.button.setTitle("Login", forState: UIControlState.Normal)
+        self.button.setTitle("OK", forState: UIControlState.Normal)
         self.button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.button)
     }
@@ -52,7 +53,9 @@ public class LoginViewController : UIViewController
     
     func buttonAction(sender:UIButton!)
     {
-        println("pressed green button")
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            self.rootViewController.didDismiss()
+        })
     }
     
     

@@ -9,7 +9,7 @@
 import UIKit
 import Snap
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+public class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     // MARK: Data members
     
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: Lifecycle
     
-    override func viewDidLoad()
+    public override func viewDidLoad()
     {
         super.viewDidLoad()
     
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Button
         button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         button.backgroundColor = UIColor.greenColor()
-        button.setTitle("Test Button", forState: UIControlState.Normal)
+        button.setTitle("Login", forState: UIControlState.Normal)
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.button)
     
@@ -81,34 +81,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     // MARK: Button Actions
     
-    func buttonAction(sender:UIButton!)
+    public func buttonAction(sender:UIButton!)
     {
-
         var login : LoginViewController = LoginViewController()
-      
+        login.rootViewController = self
+        
         self.presentViewController(login, animated: true) { () -> Void in
             println("Presented login screen")
         }
-
-        
     }
     
     
     // MARK: UITableViewDelegate
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         println("Selected row: \(indexPath.row)")
     }
     
     // MARK: UITableViewDataSource
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.dataToDisplay.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var cell : CustomTableViewCell = self.tableView.dequeueReusableCellWithIdentifier(kCellResuseIdentifier) as! CustomTableViewCell
         cell.label.text = self.dataToDisplay[indexPath.row]
@@ -119,9 +117,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: Cell Button Action
     
-    func cellButtonAction(sender: UIButton!)
+    public func cellButtonAction(sender: UIButton!)
     {
         println("Cell Button pushed for row: \(sender.tag)")
+    }
+    
+    public func didDismiss()
+    {
+        println("Did dismiss")
     }
     
 }
