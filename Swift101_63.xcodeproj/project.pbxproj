@@ -15,7 +15,6 @@
 		E73EB2F11AB356D100623E91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E73EB2F01AB356D100623E91 /* Images.xcassets */; };
 		E73EB2F41AB356D100623E91 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E73EB2F21AB356D100623E91 /* LaunchScreen.xib */; };
 		E73EB3001AB356D100623E91 /* Swift101_63Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB2FF1AB356D100623E91 /* Swift101_63Tests.swift */; };
-		E73EB30B1AB3699600623E91 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73EB30A1AB3699600623E91 /* CloudKit.framework */; };
 		E73EB3131AB37D3000623E91 /* PListProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB3121AB37D3000623E91 /* PListProxy.swift */; };
 		E73EB31B1AB3861700623E91 /* PListProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73EB3121AB37D3000623E91 /* PListProxy.swift */; };
 		E744A90E1AB4690900E27137 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E744A90D1AB4690900E27137 /* CustomView.swift */; };
@@ -50,7 +49,6 @@
 		E73EB2FE1AB356D100623E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E73EB2FF1AB356D100623E91 /* Swift101_63Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift101_63Tests.swift; sourceTree = "<group>"; };
 		E73EB3091AB3698E00623E91 /* Swift101_63.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Swift101_63.entitlements; sourceTree = "<group>"; };
-		E73EB30A1AB3699600623E91 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E73EB3121AB37D3000623E91 /* PListProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PListProxy.swift; sourceTree = "<group>"; };
 		E744A90D1AB4690900E27137 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		E7C355861AB7593C0048D91C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1E54C9443ED0E9C8534AAA5 /* Pods_Swift101_63.framework in Frameworks */,
-				E73EB30B1AB3699600623E91 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +78,6 @@
 		0B2A245E0ACE66685CD36C67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E73EB30A1AB3699600623E91 /* CloudKit.framework */,
 				604723703A838E2AD765C873 /* Pods_Swift101_63.framework */,
 			);
 			name = Frameworks;
@@ -249,7 +245,7 @@
 						DevelopmentTeam = 4A7RHA4SDK;
 						SystemCapabilities = {
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -489,7 +485,6 @@
 			baseConfigurationReference = 82705E1B2BD3A7A341B8CE0D /* Pods-Swift101_63.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Swift101_63/Swift101_63.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Swift101_63/Info.plist;
@@ -504,7 +499,6 @@
 			baseConfigurationReference = 911E31BA54D12A58A8C088B4 /* Pods-Swift101_63.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Swift101_63/Swift101_63.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Swift101_63/Info.plist;
