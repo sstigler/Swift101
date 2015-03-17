@@ -77,9 +77,7 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
-
-
-    // MARK: Button Actions
+    // MARK: Login
     
     public func buttonAction(sender:UIButton!)
     {
@@ -91,6 +89,11 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    public func didDismissLoginViewController()
+    {
+        dataToDisplay = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+        self.tableView.reloadData()
+    }
     
     // MARK: UITableViewDelegate
 
@@ -120,14 +123,6 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
     public func cellButtonAction(sender: UIButton!)
     {
         println("Cell Button pushed for row: \(sender.tag)")
-    }
-    
-    // MARK: LoginViewController callback
-    
-    public func didDismissLoginViewController()
-    {
-        dataToDisplay = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
-        self.tableView.reloadData()
     }
     
 }

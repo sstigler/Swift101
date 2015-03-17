@@ -14,9 +14,9 @@ public class LoginViewController : UIViewController
 {
     // MARK: Data members
     
-    private var button = UIButton()
     private var username = UITextField()
     private var password = UITextField()
+    private var button = UIButton()
     public var rootViewController = ViewController()
     
     // MARK: Lifecycle
@@ -25,23 +25,27 @@ public class LoginViewController : UIViewController
     {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.redColor()
         self.setupUI();
         self.setupConstraints()
     }
 
-    // MARK: Methods
+    // MARK: Setup UI
     
     private func setupUI()
     {
+        self.view.backgroundColor = UIColor.lightGrayColor()
+        
         // Username
         self.username.placeholder = "Username"
         self.username.backgroundColor = UIColor.whiteColor()
+        self.username.borderStyle = UITextBorderStyle.RoundedRect
         self.view.addSubview(self.username)
         
         // Password
         self.password.placeholder = "Password"
         self.password.backgroundColor = UIColor.whiteColor()
+        self.password.borderStyle = UITextBorderStyle.RoundedRect
+        self.password.secureTextEntry = true
         self.view.addSubview(self.password)
         
         // OK Button
@@ -51,6 +55,8 @@ public class LoginViewController : UIViewController
         self.button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.button)
     }
+    
+    // MARK: Setup Constraints
     
     private func setupConstraints()
     {
@@ -77,7 +83,7 @@ public class LoginViewController : UIViewController
     }
     
     // MARK: Action
-    
+
     func buttonAction(sender:UIButton!)
     {
         println("Username: \(self.username.text). Password: \(self.password.text).")
