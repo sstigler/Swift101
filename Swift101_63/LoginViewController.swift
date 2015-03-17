@@ -14,8 +14,8 @@ public class LoginViewController : UIViewController, LoginManagerDelegate
 {
     // MARK: Data members
     
-    private var username = UITextField()
-    private var password = UITextField()
+    private let username = UITextField()
+    private let password = UITextField()
     private var button = UIButton()
     var rootViewController = ViewController()
     

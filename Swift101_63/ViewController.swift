@@ -14,8 +14,8 @@ public class ViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: Data members
     
     private var button = UIButton()
-    private var tableView = UITableView()
-    private var customView = CustomView()
+    private let tableView = UITableView()
+    private let customView = CustomView()
    
     private var dataToDisplay = ["one", "two", "three"]
     private let kCellResuseIdentifier = "CellID"

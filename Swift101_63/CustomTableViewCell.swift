@@ -14,7 +14,7 @@ public class CustomTableViewCell : UITableViewCell
 {
     // MARK: Data members
     
-    public var label = UILabel()
+    public let label = UILabel()
     public var button = UIButton()
     
     // MARK: Lifecycle
