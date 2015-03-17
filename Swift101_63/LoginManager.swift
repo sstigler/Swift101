@@ -13,17 +13,17 @@ protocol LoginManagerDelegate: class
     func didFinishLoggingIn(loginManager: LoginManager, text: String)
 }
 
-public class LoginManager
+class LoginManager
 {
     weak var delegate: LoginManagerDelegate?
     
-    public func login(username: String, password: String)
+    func login(username: String, password: String)
     {
         // Make call to auth endpoint.
         delegate?.didFinishLoggingIn(self, text: "OK")
     }
     
-    public func loginWithCompletion(username: String, password: String, completion: (result: String)->())
+    func loginWithCompletion(username: String, password: String, completion: (result: String)->())
     {
         // Make call to auth endpoint.
         
